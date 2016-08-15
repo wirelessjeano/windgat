@@ -23,11 +23,6 @@ database:
     - bundle exec rake db:schema:load --trace
     - bundle exec rake db:test:prepare --trace
     - bundle exec rake spec --trace
-## Custom notifications
-notify:
-  webhooks:
-    # A list of hashes representing hooks. Only the url field is supported.
-    - url: https://hooks.slack.com/services/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
   
   
   
