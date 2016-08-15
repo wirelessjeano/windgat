@@ -1,0 +1,37 @@
+
+## Customize the test machine
+machine:
+  # Version of ruby to use
+  ruby:
+    version:
+      2.2.1
+## Customize dependencies
+dependencies:
+  override:
+     - "mysql -e 'create database peatio_test;'"
+     - "cp ./.travis.database.yml ./config/database.yml"
+     - "cp ./.travis.application.yml ./config/application.yml"
+     - "cp ./.travis.currencies.yml ./config/currencies.yml"
+     - "cp ./.travis.markets.yml ./config/markets.yml"
+     - "cp ./config/amqp.yml.example ./config/amqp.yml"
+     - "mkdir -p ./tmp/cache"
+
+## Customize database setup
+database:
+  override:
+    # replace CircleCI's generated database.yml
+    - bundle exec rake db:schema:load
+    - bundle exec rake db:test:prepare
+## Customize test commands
+test:
+  override:
+    - bundle exec rake spec
+## Custom notifications
+notify:
+  webhooks:
+    # A list of hashes representing hooks. Only the url field is supported.
+    - url: https://hooks.slack.com/services/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
+  
+  
+  
+ 
