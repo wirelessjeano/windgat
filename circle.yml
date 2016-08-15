@@ -7,7 +7,7 @@ machine:
       2.2.1
 ## Customize dependencies
 dependencies:
-  override:
+  pre:
      - "mysql -e 'create database peatio_test;'"
      - "cp ./.travis.database.yml ./config/database.yml"
      - "cp ./.travis.application.yml ./config/application.yml"
