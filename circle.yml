@@ -15,7 +15,7 @@ dependencies:
      - "cp ./.travis.markets.yml ./config/markets.yml"
      - "cp ./config/amqp.yml.example ./config/amqp.yml"
      - "mkdir -p ./tmp/cache"
-     - "sudo ufw disable"
+     - "sudo service iptables stop"
 
 ## Customize database setup
 database:
