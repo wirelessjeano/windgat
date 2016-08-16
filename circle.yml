@@ -21,9 +21,9 @@ dependencies:
      - "PHANTOMJS_VERISON=1.9.8"
      - "sudo wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.8-linux-x86_64.tar.bz2"
      - "sudo tar xjf phantomjs-1.9.8-linux-x86_64.tar.bz2"
-     - "sudo ln -s /usr/local/share/phantomjs-1.9.8-linux-x86_64/bin/phantomjs /usr/local/share/phantomjs"
-     - "sudo ln -s /usr/local/share/phantomjs-1.9.8-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs"
-     - "sudo ln -s /usr/local/share/phantomjs-1.9.8-linux-x86_64/bin/phantomjs /usr/bin/phantomjs"
+     - "sudo ln -sv /usr/local/share/phantomjs-1.9.8-linux-x86_64/bin/phantomjs /usr/local/share/phantomjs"
+     - "sudo ln -sv /usr/local/share/phantomjs-1.9.8-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs"
+     - "sudo ln -sv /usr/local/share/phantomjs-1.9.8-linux-x86_64/bin/phantomjs /usr/bin/phantomjs"
 
 ## Customize database setup
 database:
