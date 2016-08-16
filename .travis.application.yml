@@ -48,9 +48,9 @@ defaults: &defaults
   # we support development key and secret
   # uncomment below line only development or test
   #
-  PUSHER_APP: TRAVIS_PUSHER_APP
-  PUSHER_KEY: TRAVIS_PUSHER_KEY
-  PUSHER_SECRET: TRAVIS_PUSHER_SECRET
+  PUSHER_APP: 237537
+  PUSHER_KEY: b086f64106243a5d5c80
+  PUSHER_SECRET: 885a51653aaa80c07cc0
 
 development:
   <<: *defaults

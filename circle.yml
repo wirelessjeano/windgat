@@ -22,7 +22,7 @@ database:
     # replace CircleCI's generated database.yml
     - bundle exec rake db:schema:load
     - bundle exec rake db:test:prepare
-    - bundle exec rake spec
+    - bundle exec rake spec --trace
   
   
   
