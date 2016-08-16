@@ -15,7 +15,15 @@ dependencies:
      - "cp ./.travis.markets.yml ./config/markets.yml"
      - "cp ./config/amqp.yml.example ./config/amqp.yml"
      - "mkdir -p ./tmp/cache"
-     - "sudo iptables -F"
+     - "sudo apt-get update"
+     - "sudo apt-get install build-essential chrpath git-core libssl-dev libfontconfig1-dev"
+     - "cd /usr/local/share"
+     - "PHANTOMJS_VERISON=1.9.8"
+     - "sudo wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-$PHANTOMJS_VERISON-linux-x86_64.tar.bz2"
+     - "sudo tar xjf phantomjs-$PHANTOMJS_VERISON-linux-x86_64.tar.bz2"
+     - "sudo ln -s /usr/local/share/phantomjs-$PHANTOMJS_VERISON-linux-x86_64/bin/phantomjs /usr/local/share/phantomjs"
+     - "sudo ln -s /usr/local/share/phantomjs-$PHANTOMJS_VERISON-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs"
+     - "sudo ln -s /usr/local/share/phantomjs-$PHANTOMJS_VERISON-linux-x86_64/bin/phantomjs /usr/bin/phantomjs"
 
 ## Customize database setup
 database:
