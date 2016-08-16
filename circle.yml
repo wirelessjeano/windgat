@@ -14,7 +14,7 @@ dependencies:
      - "cp ./.travis.currencies.yml ./config/currencies.yml"
      - "cp ./.travis.markets.yml ./config/markets.yml"
      - "cp ./config/amqp.yml.example ./config/amqp.yml"
-     - "mkdir -p ./tmp/cache"
+     - "mkdir -p ./tmp/cache "
 
 ## Customize database setup
 database:
